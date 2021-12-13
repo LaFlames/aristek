@@ -15,9 +15,9 @@ export const Task: React.FC<TaskPropsType> = ({title, completed, style}) => {
                 <input
                     className={'task_input'}
                     type="checkbox"/>
-                <span>{title}</span>
+                <span className={completed ? 'task_completedTaskTitle' : 'task_currentTaskTitle'}>{title}</span>
             </div>
-            <div className={completed ? '' : 'task_twoBtns'}>
+            <div className={completed ? '' : 'task_buttons'}>
                 {!completed && <img
                     src={editIcon}
                     alt="edit task"

@@ -2,6 +2,11 @@
   grid-area: c;
   padding-top: 24px;
   padding-left: 24px;
+  &__addTaskWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &_input {
     width: 60vw;
     height: 40px;
