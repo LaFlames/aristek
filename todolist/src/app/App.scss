@@ -10,7 +10,7 @@
   grid-template-areas:
   "h h h"
   "n c d";
-  grid-template-rows: 64px calc(100vh - 64px);
+  grid-template-rows: 64px 1fr /*calc(100vh - 64px)*/;
   grid-template-columns: 0.5fr 10fr 4fr;
 }
 
@@ -21,6 +21,6 @@
 @import '../components/Header/header';
 @import '../components/Navbar/navbar';
 @import '../components/TodolistTasks/todolistTasks';
-@import '../components/TodolistTasks/CompletedTasks/completedTasks';
-@import '../components/TodolistTasks/Task/task';
+@import '../components/CompletedTasks/completedTasks';
+@import '../components/Task/task';
 @import 'media';

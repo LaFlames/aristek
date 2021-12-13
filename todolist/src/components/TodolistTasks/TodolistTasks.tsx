@@ -1,34 +1,18 @@
 import React, {useState} from 'react';
-import {Task} from "./Task/Task";
+import {Task} from "../Task/Task";
 
+export type TaskType = {
+    userId: number
+    id: number
+    title: string
+    completed: boolean
+}
 
-export const TodolistTasks = () => {
+type TodolistTasksPropsType = {
+    tasks: TaskType[]
+}
 
-    type TaskType = {
-        userId: number
-        id: number
-        title: string
-        completed: boolean
-    }
-
-    const [tasks, setTasks] = useState<TaskType[]>([{
-        "userId": 1,
-        "id": 1,
-        "title": "delectus aut autem",
-        "completed": true
-    },
-        {
-            "userId": 1,
-            "id": 2,
-            "title": "quis ut nam facilis et officia qui",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 3,
-            "title": "fugiat veniam minus",
-            "completed": true
-        }])
+export const TodolistTasks: React.FC<TodolistTasksPropsType> = React.memo(({tasks}) => {
 
     return (
         <section className={'todolist'}>
@@ -46,8 +30,9 @@ export const TodolistTasks = () => {
                     title={task.title}
                     completed={task.completed}
                     style={task.completed ? 'completedTask' : 'task'}
+                    id={task.id}
                 />)}
             </div>
         </section>
     );
-};
+})
