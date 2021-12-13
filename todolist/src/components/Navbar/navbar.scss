@@ -1,11 +1,9 @@
 .navbar {
-  width: 52px;
-  height: calc(100vh - 64px);
+  grid-area: n;
   background: #550DC9;
   box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1);
   padding-top: 24px;
   &_logoWrapper {
-    width: 52px;
     height: 32px;
     display: flex;
     justify-content: center;

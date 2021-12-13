@@ -1,6 +1,5 @@
 .header {
-  width: 1fr;
-  height: 64px;
+  grid-area: h;
   padding-right: 16px;
   padding-left: 16px;
   display: flex;
@@ -35,8 +34,6 @@
     width: 170px;
   }
   &_profileName {
-    font-family: Open Sans;
-    font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 19px;

@@ -1,0 +1,11 @@
+.completedTasks {
+  grid-area: d;
+  padding-top: 24px;
+  &_title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #373737;
+    margin-bottom: 8px;
+  }
+}

@@ -7,6 +7,11 @@
 
 .App {
   display: grid;
+  grid-template-areas:
+  "h h h"
+  "n c d";
+  grid-template-rows: 64px calc(100vh - 64px);
+  grid-template-columns: 0.5fr 12fr 4fr;
 }
 
 
@@ -15,3 +20,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 @import '../components/Header/header';
 @import '../components/Navbar/navbar';
+@import '../components/TodolistTasks/todolistTasks';
+@import '../components/TodolistTasks/CompletedTasks/completedTasks';
+@import '../components/TodolistTasks/Task/task';

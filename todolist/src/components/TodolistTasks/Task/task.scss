@@ -1,0 +1,28 @@
+.task, .completedTask {
+  width: 64vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 12px;
+  margin-bottom: 16px;
+  height: 48px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  &_input {
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  &_twoBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+  }
+}
+
+.completedTask {
+  width: 22vw;
+}

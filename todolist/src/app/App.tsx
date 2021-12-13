@@ -2,15 +2,16 @@ import React from 'react';
 import './App.scss';
 import {Header} from "../components/Header/Header";
 import { Navbar } from '../components/Navbar/Navbar';
+import {TodolistTasks} from "../components/TodolistTasks/TodolistTasks";
+import {CompletedTasks} from "../components/TodolistTasks/CompletedTasks/CompletedTasks";
 
 function App() {
     return (
         <div className="App">
             <Header/>
-            <div style={{display: "flex"}}>
-                <Navbar/>
-
-            </div>
+            <Navbar/>
+            <TodolistTasks/>
+            <CompletedTasks/>
         </div>
     );
 }
