@@ -2,12 +2,10 @@ import axios from 'axios'
 import {TaskType} from "../components/TodolistTasks/TodolistTasks";
 
 
-
 const instance = axios.create({
     baseURL: 'https://jsonplaceholder.typicode.com/todos',
     withCredentials: true
 })
-
 
 
 //api
@@ -15,29 +13,31 @@ export const appAPI = {
     getTasks() {
         return instance.get<TaskType[]>('/')
     },
-    /*deleteTask(taskId: string) {
-        return instance.delete<TaskType[]>(`/${taskId}`)
-    }*/
-    /*me(){
-        return instance.post<LoginResponseType>( '/auth/me',{})
+    createTask(data: CreateTaskRequestDataType) {
+        return instance.post<TaskType>( '/', data)
     },
-    logoutUser() {
-        return instance.delete<UnLoginResponseType>(`/auth/me`)
-    },*/
+    deleteTask(taskId: number) {
+        return instance.delete<{}>(`/${taskId}`)
+    },
+    updateTask(taskId: number, data: UpdateTaskRequestDataType) {
+        return instance.put<TaskType>( `/${taskId}`, data)
+    }
 }
-
-
 
 
 //types
-type LoginRequestDataType = {
-    email: string
-    password: string
-    rememberMe: boolean
+type CreateTaskRequestDataType = {
+    userId: number
+    title: string
+    completed: boolean
 }
 
-type UnLoginResponseType = {
-    info: string
-    error?: string
+export type UpdateTaskRequestDataType = {
+    title?: string
+    completed?: boolean
 }
+
+
+
+
 

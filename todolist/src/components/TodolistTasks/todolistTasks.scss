@@ -15,6 +15,10 @@
     border-radius: 4px;
     padding: 12px 10px;
   }
+  &_inputError {
+    background: rosybrown;
+    border: 1px solid red;
+  }
   &_btn {
     width: 50px;
     height: 40px;

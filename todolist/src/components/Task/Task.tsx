@@ -1,8 +1,8 @@
-import React, {useCallback} from 'react';
+import React, {ChangeEvent, useCallback} from 'react';
 import deleteIcon from './assets/delete.svg';
 import editIcon from './assets/edit.svg';
 import {useDispatch} from "react-redux";
-import {deleteTask} from "../TodolistTasks/todolistTasks-reducer";
+import {deleteTask, deleteTaskTC, updateTaskTC} from "../TodolistTasks/todolistTasks-reducer";
 
 type TaskPropsType = {
     title: string
@@ -16,14 +16,20 @@ export const Task: React.FC<TaskPropsType> = React.memo(({title, completed, styl
     const dispatch = useDispatch()
 
     const deleteTaskHandler = useCallback(() => {
-        dispatch(deleteTask(id))
+        dispatch(deleteTaskTC(id))
     }, [dispatch])
+
+    const changeTaskStatusHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        let newIsDone = e.currentTarget.checked
+        dispatch(updateTaskTC(id, {completed: newIsDone}))
+    }
 
     return (
         <div className={style}>
             <div>
                 <input
-                    className={'task_input'}
+                    checked={completed}
+                    onChange={changeTaskStatusHandler}
                     type="checkbox"/>
                 <span className={completed ? 'task_completedTaskTitle' : 'task_currentTaskTitle'}>{title}</span>
             </div>

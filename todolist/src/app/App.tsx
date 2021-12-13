@@ -5,7 +5,7 @@ import { Navbar } from '../components/Navbar/Navbar';
 import {TaskType, TodolistTasks} from "../components/TodolistTasks/TodolistTasks";
 import {CompletedTasks} from "../components/CompletedTasks/CompletedTasks";
 import {useDispatch, useSelector} from "react-redux";
-import {setTasksTC} from "../components/TodolistTasks/todolistTasks-reducer";
+import {fetchTasksTC} from "../components/TodolistTasks/todolistTasks-reducer";
 import {AppRootStateType} from "./store";
 
 function App() {
@@ -16,18 +16,21 @@ function App() {
     const todoTasksForUserWithId1 = todoTasks.filter(task => task.userId === 1)
 
     const currentTasks = todoTasksForUserWithId1.filter(task => !task.completed)
-    const unCompletedTasks = todoTasksForUserWithId1.filter(task => task.completed)
+    const completedTasks = todoTasksForUserWithId1.filter(task => task.completed)
 
     useEffect(() => {
-        dispatch(setTasksTC())
-    }, [])
+        dispatch(fetchTasksTC())
+    }, [dispatch])
 
     return (
         <div className="App">
             <Header/>
             <Navbar/>
-            <TodolistTasks tasks={currentTasks}/>
-            <CompletedTasks tasks={unCompletedTasks}/>
+            <TodolistTasks
+                currentTasks={currentTasks}
+                allTasks={todoTasksForUserWithId1}
+            />
+            <CompletedTasks completedTasks={completedTasks}/>
         </div>
     );
 }

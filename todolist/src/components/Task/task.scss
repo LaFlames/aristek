@@ -14,17 +14,12 @@
     line-height: 19px;
     color: #373737;
   }
-  &_input {
-    background: #FFFFFF;
-    border: 1px solid #ECECEC;
-    border-radius: 4px;
-    margin-right: 8px;
-  }
   &_buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50px;
+    width: 40px;
+    margin-left: 15px;
   }
   &_completedTaskTitle {
     font-size: 14px;
@@ -32,8 +27,24 @@
     text-decoration-line: line-through;
     color: #A3A3A3;
   }
+  input[type=checkbox] {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    padding: 3px;
+    border: 1px solid #550DC9;
+    border-radius: 4px;
+    margin-right: 8px;
+    &:checked{
+      background-color: #550DC9;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .completedTask {
   width: 26vw;
 }
+
