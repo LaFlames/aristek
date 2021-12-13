@@ -19,7 +19,7 @@
   .task, .completedTask {
     width: 87vw;
   }
-  .todolist {
+  .addItemForm {
     &_input {
       width: 77vw;
     }
@@ -27,7 +27,7 @@
 }
 
 @media (max-width: 480px) {
-  .todolist {
+  .addItemForm {
     &_input {
       width: 68vw;
     }
