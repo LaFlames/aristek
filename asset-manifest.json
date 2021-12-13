@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/aristek/static/css/main.30f303ac.chunk.css",
+    "main.js": "/aristek/static/js/main.c5d040c6.chunk.js",
+    "main.js.map": "/aristek/static/js/main.c5d040c6.chunk.js.map",
+    "runtime-main.js": "/aristek/static/js/runtime-main.cb03c9d1.js",
+    "runtime-main.js.map": "/aristek/static/js/runtime-main.cb03c9d1.js.map",
+    "static/js/2.6ead89dc.chunk.js": "/aristek/static/js/2.6ead89dc.chunk.js",
+    "static/js/2.6ead89dc.chunk.js.map": "/aristek/static/js/2.6ead89dc.chunk.js.map",
+    "index.html": "/aristek/index.html",
+    "static/css/main.30f303ac.chunk.css.map": "/aristek/static/css/main.30f303ac.chunk.css.map",
+    "static/js/2.6ead89dc.chunk.js.LICENSE.txt": "/aristek/static/js/2.6ead89dc.chunk.js.LICENSE.txt",
+    "static/media/arrow.eaade4b4.svg": "/aristek/static/media/arrow.eaade4b4.svg",
+    "static/media/icon.cb48dfe7.svg": "/aristek/static/media/icon.cb48dfe7.svg",
+    "static/media/tasks.9e85abfa.svg": "/aristek/static/media/tasks.9e85abfa.svg",
+    "static/media/todo.f5830c5a.svg": "/aristek/static/media/todo.f5830c5a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb03c9d1.js",
+    "static/js/2.6ead89dc.chunk.js",
+    "static/css/main.30f303ac.chunk.css",
+    "static/js/main.c5d040c6.chunk.js"
+  ]
+}
